@@ -1,4 +1,5 @@
 import { assertEquals, assert, assertFalse } from "@std/assert";
+import { Puzzle } from "./puzzle.ts"
 
 Deno.test("puzzle state flipped numbers gets correctly outputed as a string", function addTest() {
     // Arrange
@@ -109,7 +110,7 @@ Deno.test("Given dice sum 6 when user wants to flip 4 and 5 then puzzle returns 
 Deno.test("When puzzle completed it returns true", function addTest() {
     // Arrange
     const puzzle = new Puzzle();
-    for(let i = 1; i++; i <= 9) {
+    for(let i = 1; i <= 9; i++) {
         puzzle.flip(i);
     }
 
@@ -124,7 +125,7 @@ Deno.test("When puzzle completed it returns true", function addTest() {
 Deno.test("When puzzle isn't completed it returns false", function addTest() {
     // Arrange
     const puzzle = new Puzzle();
-    for(let i = 1; i++; i <= 8) {
+    for(let i = 1; i <= 8; i++) {
         puzzle.flip(i);
     }
 
