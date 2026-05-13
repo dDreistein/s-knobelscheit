@@ -23,8 +23,7 @@ while (!puzzle.completed()) {
     userChoice.forEach((num) => puzzle.flip(num));
   }
   else {
-    console.log("Wrong input. Try again next roll\n");
-    continue;
+    console.log("Wrong input. Try again next roll");
   }
   console.log()
 
