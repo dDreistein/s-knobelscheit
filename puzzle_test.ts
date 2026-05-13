@@ -107,6 +107,19 @@ Deno.test("Given dice sum 6 when user wants to flip 4 and 5 then puzzle returns 
     assertFalse(actual)
 })
 
+Deno.test("Given dice sum 8 when user wants to flip 4 and 4 then puzzle returns false", function addTest() {
+    // Arrange
+    const puzzle = new Puzzle();
+    const diceSum = 8;
+    const userChoice = [4, 4]
+
+    // Act
+    const actual = puzzle.validateUserChoice(userChoice, diceSum)
+
+    // Assert
+    assertFalse(actual)
+})
+
 Deno.test("When puzzle completed it returns true", function addTest() {
     // Arrange
     const puzzle = new Puzzle();
