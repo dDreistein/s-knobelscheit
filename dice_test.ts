@@ -1,6 +1,5 @@
-import { assertLessOrEqual } from "@std/assert/less-or-equal";
-import { assertGreaterOrEqual } from "@std/assert/greater-or-equal";
-import { assertEquals } from "@std/assert";
+import { assertEquals, assertGreaterOrEqual, assertLessOrEqual } from "@std/assert";
+import { Dice } from "./dice.ts"
 
 Deno.test("dice returns random number between 1-6", function addTest() {
     // Arrange
@@ -21,7 +20,7 @@ Deno.test("adding two dices together gives back correct sum", function addTest()
     const expectedSum= dice1.roll() + dice2.roll();
 
     // Act
-    const actual = Dice().sum(dice1,dice2)
+    const actual = Dice.sum(dice1,dice2)
 
     // Assert
     assertEquals(actual, expectedSum)
